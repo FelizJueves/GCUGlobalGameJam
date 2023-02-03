@@ -383,6 +383,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Top Down Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 3504475267904368260, guid: 56b70d395217840439c8899cb43b1698, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56b70d395217840439c8899cb43b1698, type: 3}
 --- !u!1001 &2870398841052901617
