@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer)), RequireComponent(typeof(MeshFilter))]
 public class PlayerController : MonoBehaviour
 {
-    
+    public int health;
 
     // Update is called once per frame
     void Update()
@@ -19,5 +19,9 @@ public class PlayerController : MonoBehaviour
         newPostition.z += Input.GetAxis("Vertical");
 
         this.transform.position = newPostition;
+    }
+
+    public override string ToString() {
+        return string.Format("Health: {0}", health);
     }
 }
