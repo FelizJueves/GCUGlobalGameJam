@@ -5,15 +5,31 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer)), RequireComponent(typeof(MeshFilter))]
 public class PlayerController : MonoBehaviour
 {
-    bool isDead;
+    public BulletController bullet;
+    public BulletController melee;
+    public CrosshairController crosshair;
+    
+    [Min(1)]
     public int health;
+    [Min(0)]
     public float movementFactor;
+
+    bool isDead;
+
+    void Start() {
+        Instantiate(crosshair, this.transform);
+    }
 
     // Update is called once per frame
     void Update()
     {
         handleHealth();
-        handleMovement();
+
+        if(!isDead) {
+            handleMovement();
+            handleActions();
+        }
+        
     }
 
     void handleHealth() {
@@ -22,17 +38,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void kill() {
-        isDead = true;
+    void handleMovement() {
+        Vector3 newPosition = new Vector3(Input.GetAxis("Horizontal") * movementFactor, 0f, Input.GetAxis("Vertical") * movementFactor);
+        newPosition *= Time.deltaTime;
+        this.transform.position += newPosition;
     }
 
-    void handleMovement() {
-        if (isDead) return;
-        Vector3 newPostition = this.transform.position;
-        newPostition.x += Input.GetAxis("Horizontal") * movementFactor;
-        newPostition.z += Input.GetAxis("Vertical") * movementFactor;
+    void handleActions() {
+        if (Input.GetMouseButtonDown(0)) {
+            Instantiate(melee, this.transform.position, Quaternion.identity);
+        }
+        else if (Input.GetMouseButtonDown(1)) {
+            Instantiate(bullet, this.transform.position, Quaternion.identity);
+        }
+    }
 
-        this.transform.position = newPostition;
+    void kill() {
+        isDead = true;
     }
 
     public override string ToString() {

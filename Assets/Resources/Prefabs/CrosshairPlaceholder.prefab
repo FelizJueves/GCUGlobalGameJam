@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9199016165516612392}
   m_Layer: 0
   m_Name: CrosshairPlaceholder
-  m_TagString: Untagged
+  m_TagString: Crosshair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +97,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorOffset: 0.1
+  circleRadius: 100
