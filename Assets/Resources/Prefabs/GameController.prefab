@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5755875632283547690}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,3 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac957c7f1bd6044f8239bd1f9b35f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Level: 0
+  level1Mesh: {fileID: 0}
+  level2Mesh: {fileID: 919132149155446097, guid: a9551c7c3185bf648a00d29645533614, type: 3}
+  level3Mesh: {fileID: 0}
+  level4Mesh: {fileID: 0}

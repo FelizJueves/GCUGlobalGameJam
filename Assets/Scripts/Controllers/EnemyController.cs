@@ -37,6 +37,11 @@ public class EnemyController : MonoBehaviour
 
     void Awake() {
         transformToChase = GameObject.FindWithTag("MainCharacter").transform;
+        decideMesh();
+    }
+
+    void decideMesh() {
+        GetComponent<MeshFilter>().mesh = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().getEnemyMesh();
     }
 
     // Update is called once per frame

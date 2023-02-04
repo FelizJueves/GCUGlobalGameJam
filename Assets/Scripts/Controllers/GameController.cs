@@ -8,6 +8,22 @@ public class GameController : MonoBehaviour
     public enum LevelEnum {Level1, Level2, Level3, Level4, HubWorld}
     public LevelEnum Level;
 
+    public GameObject level1Mesh;
+    public GameObject level2Mesh;
+    public GameObject level3Mesh;
+    public GameObject level4Mesh;
+
+    public Mesh getEnemyMesh() {
+        Mesh[] meshes = new Mesh[]{
+            level1Mesh.GetComponent<MeshFilter>().mesh,
+            level2Mesh.GetComponent<MeshFilter>().mesh,
+            level3Mesh.GetComponent<MeshFilter>().mesh,
+            level4Mesh.GetComponent<MeshFilter>().mesh,
+            null
+        };
+        return meshes[(int) Level];
+    }
+
     // Start is called before the first frame update
     void Start()
     {
