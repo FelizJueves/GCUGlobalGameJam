@@ -5,18 +5,32 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer)), RequireComponent(typeof(MeshFilter))]
 public class PlayerController : MonoBehaviour
 {
+    bool isDead;
     public int health;
+    public float movementFactor;
 
     // Update is called once per frame
     void Update()
     {
+        handleHealth();
         handleMovement();
     }
 
+    void handleHealth() {
+        if (health <= 0) {
+            kill();
+        }
+    }
+
+    void kill() {
+        isDead = true;
+    }
+
     void handleMovement() {
+        if (isDead) return;
         Vector3 newPostition = this.transform.position;
-        newPostition.x += Input.GetAxis("Horizontal");
-        newPostition.z += Input.GetAxis("Vertical");
+        newPostition.x += Input.GetAxis("Horizontal") * movementFactor;
+        newPostition.z += Input.GetAxis("Vertical") * movementFactor;
 
         this.transform.position = newPostition;
     }

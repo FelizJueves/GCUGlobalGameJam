@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [Min(0)]
-    public float enemySpeedMultiplier = 0.05f;
+    public float movementFactor;
 
     [Min(1)]
     public int health;
@@ -20,8 +20,13 @@ public class EnemyController : MonoBehaviour
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
             player.health -= damage;
-            Debug.Log(player);
+            Debug.Log(player.health);
+            Destroy(this.gameObject);
         }
+    }
+
+    void Awake() {
+        transformToChase = GameObject.FindWithTag("MainCharacter").transform;
     }
 
     // Update is called once per frame
@@ -32,7 +37,7 @@ public class EnemyController : MonoBehaviour
 
     void handleMovement() {
         this.transform.LookAt(GameObject.FindWithTag("MainCharacter").transform);
-        Vector3 newPosition = this.transform.position + new Vector3(this.transform.forward.x * enemySpeedMultiplier, 0f, this.transform.forward.z * enemySpeedMultiplier);
+        Vector3 newPosition = this.transform.position + new Vector3(this.transform.forward.x * movementFactor, 0f, this.transform.forward.z * movementFactor);
         this.transform.position = newPosition;
     }
 }

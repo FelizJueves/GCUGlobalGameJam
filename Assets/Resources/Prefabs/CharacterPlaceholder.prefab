@@ -111,7 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17cd6e698ef1578499e5a58c486590db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDead: 0
   health: 5
+  movementFactor: 0.05
 --- !u!54 &-4328941865421182203
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -122,7 +124,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
