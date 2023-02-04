@@ -29,7 +29,6 @@ public class SceneController : MonoBehaviour
             }
             else if (this.transform.parent.CompareTag("HomeTele"))
             {
-                Debug.Log("Yeet");
                 SceneManager.LoadScene(0);
             }
         }
