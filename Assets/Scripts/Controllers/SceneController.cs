@@ -11,7 +11,27 @@ public class SceneController : MonoBehaviour
     {
         if (collision.tag == "MainCharacter")
         {
-            SceneManager.LoadScene(1);
+            if(this.transform.parent.CompareTag("Level1Tele"))
+            {
+                SceneManager.LoadScene(1);
+            }
+            else if(this.transform.parent.CompareTag("Level2Tele"))
+            {
+                SceneManager.LoadScene(2);
+            }
+            else if (this.transform.parent.CompareTag("Level3Tele"))
+            {
+                SceneManager.LoadScene(3);
+            }
+            else if (this.transform.parent.CompareTag("Level4Tele"))
+            {
+                SceneManager.LoadScene(4);
+            }
+            else if (this.transform.parent.CompareTag("HomeTele"))
+            {
+                Debug.Log("Yeet");
+                SceneManager.LoadScene(0);
+            }
         }
     }
         
