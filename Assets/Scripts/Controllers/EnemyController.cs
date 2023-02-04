@@ -6,8 +6,28 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [Min(0)]
-    public float enemySpeed = 0.05f;
+    public float movementFactor;
+
+    [Min(1)]
+    public int health;
+    [Min(1)]
+    public int damage;
+
     Transform transformToChase;
+
+    void OnTriggerEnter(Collider collision) {
+        if (collision.tag == "MainCharacter")
+        {
+            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+            player.health -= damage;
+            Debug.Log(player.health);
+            Destroy(this.gameObject);
+        }
+    }
+
+    void Awake() {
+        transformToChase = GameObject.FindWithTag("MainCharacter").transform;
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,7 +37,7 @@ public class EnemyController : MonoBehaviour
 
     void handleMovement() {
         this.transform.LookAt(GameObject.FindWithTag("MainCharacter").transform);
-        Vector3 newPosition = this.transform.position + new Vector3(this.transform.forward.x * enemySpeed, 0f, this.transform.forward.z * enemySpeed);
+        Vector3 newPosition = this.transform.position + new Vector3(this.transform.forward.x * movementFactor, 0f, this.transform.forward.z * movementFactor);
         this.transform.position = newPosition;
     }
 }
