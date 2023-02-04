@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public BulletController bullet;
+    public CrosshairController crosshair;
     
     [Min(1)]
     public int health;
@@ -13,6 +14,10 @@ public class PlayerController : MonoBehaviour
     public float movementFactor;
 
     bool isDead;
+
+    void Start() {
+        Instantiate(crosshair, this.transform);
+    }
 
     // Update is called once per frame
     void Update()

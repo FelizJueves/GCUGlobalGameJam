@@ -26,8 +26,12 @@ public class BulletController : MonoBehaviour
     void handleLifetime() {
         timeToLive -= Time.deltaTime;
         if (timeToLive < 0f) {
-            Destroy(this.gameObject);
+            kill();
         }
+    }
+
+    void kill() {
+        Destroy(this.gameObject);
     }
 
     void handleMovement() {
