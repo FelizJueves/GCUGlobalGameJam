@@ -111,9 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17cd6e698ef1578499e5a58c486590db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDead: 0
+  bullet: {fileID: 1728015286735023681, guid: bfbc26ac864f07043ac56405bc695255, type: 3}
   health: 5
-  movementFactor: 0.05
+  movementFactor: 1
 --- !u!54 &-4328941865421182203
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 86
   m_CollisionDetection: 0

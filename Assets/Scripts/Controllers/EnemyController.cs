@@ -5,24 +5,34 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer)), RequireComponent(typeof(MeshFilter))]
 public class EnemyController : MonoBehaviour
 {
-    [Min(0)]
-    public float movementFactor;
-
     [Min(1)]
     public int health;
     [Min(1)]
     public int damage;
+    [Min(0)]
+    public float movementFactor;
 
     Transform transformToChase;
 
     void OnTriggerEnter(Collider collision) {
-        if (collision.tag == "MainCharacter")
-        {
-            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-            player.health -= damage;
-            Debug.Log(player.health);
-            Destroy(this.gameObject);
+        switch(collision.tag) {
+            case "MainCharacter":
+                MainCharacterCollision(collision.gameObject.GetComponent<PlayerController>());
+                break;
+            case "Bullet":
+                BulletCollision(collision.gameObject.GetComponent<BulletController>());
+                break;
         }
+    }
+
+    void MainCharacterCollision(PlayerController player) {
+        player.health -= damage;
+        Destroy(this.gameObject);
+    }
+
+    void BulletCollision(BulletController bullet) {
+        this.health -= bullet.damage;
+        Destroy(bullet.gameObject);
     }
 
     void Awake() {
@@ -32,7 +42,18 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        handleHealth();
         handleMovement();
+    }
+
+    void handleHealth() {
+        if (this.health <= 0) {
+            kill();
+        }
+    }
+
+    void kill() {
+        Destroy(this.gameObject);
     }
 
     void handleMovement() {
