@@ -8,11 +8,10 @@ public class BulletController : MonoBehaviour
 
     public float movementFactor;
 
-    float timeToLive;
+    public float timeToLive;
     // Start is called before the first frame update
     void Start()
     {
-        timeToLive = 1f / movementFactor;
         this.transform.LookAt(GameObject.FindWithTag("Crosshair").transform);
     }
 

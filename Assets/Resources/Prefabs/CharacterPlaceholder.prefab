@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1728015286735023681, guid: bfbc26ac864f07043ac56405bc695255, type: 3}
+  melee: {fileID: 1728015286735023681, guid: 147fa7572d5c9994bbd2da992b53908e, type: 3}
   crosshair: {fileID: 9199016165516612392, guid: 54720dd7edeffc64a80f3e6420ebf27e, type: 3}
   health: 5
   movementFactor: 1

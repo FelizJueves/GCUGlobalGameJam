@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public BulletController bullet;
+    public BulletController melee;
     public CrosshairController crosshair;
     
     [Min(1)]
@@ -45,6 +46,9 @@ public class PlayerController : MonoBehaviour
 
     void handleActions() {
         if (Input.GetMouseButtonDown(0)) {
+            Instantiate(melee, this.transform.position, Quaternion.identity);
+        }
+        else if (Input.GetMouseButtonDown(1)) {
             Instantiate(bullet, this.transform.position, Quaternion.identity);
         }
     }
