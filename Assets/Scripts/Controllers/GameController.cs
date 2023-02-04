@@ -5,39 +5,38 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-
+    public enum LevelEnum {Level1, Level2, Level3, Level4, HubWorld}
+    public LevelEnum Level;
 
     // Start is called before the first frame update
     void Start()
     {
-         Scene CurrentScene = SceneManager.GetActiveScene();
+        Scene CurrentScene = SceneManager.GetActiveScene();
+        
         if (CurrentScene.name == "Level1")
         {
-            Debug.Log("Level1");
+            Level = LevelEnum.Level1;
+            Debug.Log(Level);
+
         }
         else if (CurrentScene.name == "Level2")
         {
-            Debug.Log("Level2");
+            Level = LevelEnum.Level2;
+            Debug.Log(Level);
         }
         else if (CurrentScene.name == "Level3")
         {
-            Debug.Log("Level3");
+            Level = LevelEnum.Level3;
+            Debug.Log(Level);
         }
         else if (CurrentScene.name == "Level4")
         {
-            Debug.Log("Level4");
+            Level = LevelEnum.Level4;
         }
         else if (CurrentScene.name == "HubWorld")
         {
-            Debug.Log("Hub World");
+            Level = LevelEnum.HubWorld;
+            Debug.Log(Level);
         }
-    }
-    void Update()
-    {
-        /*if(Input.GetKeyDown(KeyCode.E))
-        {
-            CheckLevel();
-        }*/
-        
     }
 }
