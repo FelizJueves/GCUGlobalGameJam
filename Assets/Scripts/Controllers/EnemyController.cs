@@ -60,7 +60,6 @@ public class EnemyController : MonoBehaviour
         this.transform.LookAt(GameObject.FindWithTag("MainCharacter").transform);
         Vector3 newPosition = new Vector3(this.transform.forward.x * movementFactor, 0f, this.transform.forward.z * movementFactor);
         newPosition *= Time.deltaTime;
-        // this.GetComponent<Rigidbody>().MovePosition(newPosition);
         this.transform.position += newPosition;
     }
 }
