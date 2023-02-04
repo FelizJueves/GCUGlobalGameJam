@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - MainCharacter
+  - Level1Tele
+  - Level2Tele
+  - Level3Tele
+  - Level4Tele
+  - HomeTele
   layers:
   - Default
   - TransparentFX
