@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 665337873810677490}
   - component: {fileID: -4690144767303744692}
   m_Layer: 0
-  m_Name: calculator
+  m_Name: calculatorModel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

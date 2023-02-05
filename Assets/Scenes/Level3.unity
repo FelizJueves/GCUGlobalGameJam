@@ -3322,7 +3322,7 @@ PrefabInstance:
     - target: {fileID: 7939280712066513415, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
       propertyPath: Enemy
       value: 
-      objectReference: {fileID: 8058327909375820931, guid: c29de340905590f4289877660281d967, type: 3}
+      objectReference: {fileID: 8088177850094082616, guid: 830f024dae9dd604a8d96c36d9b2f65a, type: 3}
     - target: {fileID: 7939280712066513415, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
       propertyPath: WaveTimer
       value: 3
