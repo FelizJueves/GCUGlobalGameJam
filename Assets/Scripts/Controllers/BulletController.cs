@@ -8,13 +8,14 @@ public class BulletController : MonoBehaviour
 
     public float movementFactor;
     public int MultiKill;
-    public GameObject GameController;
+    GameController gameController;
 
     public float timeToLive;
     // Start is called before the first frame update
     void Start()
     {
         this.transform.LookAt(GameObject.FindWithTag("Crosshair").transform);
+        gameController = GameController.gameController;
     }
 
     // Update is called once per frame
@@ -22,6 +23,16 @@ public class BulletController : MonoBehaviour
     {
         handleLifetime();
         handleMovement();
+    }
+
+    void OnTriggerEnter(Collider collision) {
+        switch(collision.tag) {
+            case "Enemy":
+                EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+                enemy.kill();
+                this.KillCounter();
+                break;
+        }
     }
 
     void handleLifetime() {
@@ -39,27 +50,27 @@ public class BulletController : MonoBehaviour
         if (MultiKill == 1)
         {
             KillScore = 100;
-            GameController.GetComponent<GameController>().UpdateScore(KillScore);
+            gameController.UpdateScore(KillScore);
         }
         else if (MultiKill == 2)
         {
             KillScore = 250;
-            GameController.GetComponent<GameController>().UpdateScore(KillScore);
+            gameController.UpdateScore(KillScore);
         }
         else if (MultiKill == 3)
         {
             KillScore = 400;
-            GameController.GetComponent<GameController>().UpdateScore(KillScore);
+            gameController.UpdateScore(KillScore);
         }
         else if (MultiKill == 4) 
         {
             KillScore = 650;
-            GameController.GetComponent<GameController>().UpdateScore(KillScore);
+            gameController.UpdateScore(KillScore);
         }
         else if (MultiKill >= 5)
         {
             KillScore = 1000;
-            GameController.GetComponent<GameController>().UpdateScore(KillScore);
+            gameController.UpdateScore(KillScore);
         }
 
         Destroy(this.gameObject);
