@@ -12,6 +12,7 @@ TagManager:
   - HomeTele
   - Bullet
   - Crosshair
+  - Enemy
   layers:
   - Default
   - TransparentFX
