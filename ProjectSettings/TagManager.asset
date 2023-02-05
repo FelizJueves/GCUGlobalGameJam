@@ -10,6 +10,8 @@ TagManager:
   - Level3Tele
   - Level4Tele
   - HomeTele
+  - Bullet
+  - Crosshair
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5755875632283547690}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.9361897, y: -0.69028133, z: -4.5527477}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,3 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac957c7f1bd6044f8239bd1f9b35f9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Level: 0
+  enemies:
+  - {fileID: 919132149155446097, guid: cdfdf276415fe1749a95cc3ad9170b99, type: 3}
+  - {fileID: 105171755735399822, guid: af4fd9ed0eae11f49af4118f0c95b950, type: 3}
+  - {fileID: 8058327909375820931, guid: c29de340905590f4289877660281d967, type: 3}
