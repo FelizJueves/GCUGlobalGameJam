@@ -5,23 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public static GameController gameController;
     public enum LevelEnum {Level1, Level2, Level3, Level4, HubWorld}
     public LevelEnum Level;
 
-    public int Score;
+    int Score;
 
     public GameObject[] enemies;
 
-    public void setEnemyType(GameObject enemyObject) {
-        int intLevel = (int) Level;
-        enemyObject.GetComponent<MeshFilter>().mesh = enemies[intLevel].GetComponent<MeshFilter>().sharedMesh;
-        enemyObject.GetComponent<MeshRenderer>().materials = enemies[intLevel].GetComponent<MeshRenderer>().sharedMaterials;
-        enemyObject.GetComponent<MeshCollider>().sharedMesh = enemyObject.GetComponent<MeshFilter>().sharedMesh;
-        enemyObject.transform.localScale = enemies[intLevel].transform.localScale;
+    public int getScore() {
+        return Score;
     }
 
     void Awake()
     {
+        gameController = this;
         Score = 0;
         Scene CurrentScene = SceneManager.GetActiveScene();
         
@@ -55,9 +53,5 @@ public class GameController : MonoBehaviour
     {
         Score = Score + KillScore;
         Debug.Log(Score);
-    }
-    public void Update()
-    {
-        //Debug.Log(Score);
     }
 }

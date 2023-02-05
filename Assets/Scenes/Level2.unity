@@ -911,6 +911,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7939280712066513415, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 105171755735399822, guid: af4fd9ed0eae11f49af4118f0c95b950, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
 --- !u!1001 &1272325041

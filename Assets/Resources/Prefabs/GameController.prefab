@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: 0
+  Score: 0
   enemies:
   - {fileID: 919132149155446097, guid: cdfdf276415fe1749a95cc3ad9170b99, type: 3}
   - {fileID: 105171755735399822, guid: af4fd9ed0eae11f49af4118f0c95b950, type: 3}

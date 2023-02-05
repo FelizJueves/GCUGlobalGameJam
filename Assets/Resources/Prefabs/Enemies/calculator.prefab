@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 8839278237530885627}
   - component: {fileID: 5028940354932478903}
   - component: {fileID: 8740109335086975902}
+  - component: {fileID: 2969898542555104164}
+  - component: {fileID: 665337873810677490}
+  - component: {fileID: -4690144767303744692}
   m_Layer: 0
-  m_Name: CalculatorObject
-  m_TagString: Untagged
+  m_Name: calculator
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,3 +91,47 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2969898542555104164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8058327909375820931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c26f09eaf670041b6d46a3ae9271cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  damage: 1
+  movementFactor: 1
+--- !u!54 &665337873810677490
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8058327909375820931}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 0
+--- !u!65 &-4690144767303744692
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8058327909375820931}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.021137659, y: 0.045634378, z: 0.063528985}
+  m_Center: {x: -0.00014095662, y: -0.00052607065, z: 0}
