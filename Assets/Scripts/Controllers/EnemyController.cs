@@ -37,9 +37,10 @@ public class EnemyController : MonoBehaviour
     }
 
     void handleMovement() {
-        this.transform.LookAt(GameObject.FindWithTag("MainCharacter").transform);
-        Vector3 newPosition = new Vector3(this.transform.forward.x * movementFactor, 0f, this.transform.forward.z * movementFactor);
+        Transform transform = this.transform.parent;
+        transform.LookAt(transformToChase);
+        Vector3 newPosition = new Vector3(transform.forward.x * movementFactor, 0f, transform.forward.z * movementFactor);
         newPosition *= Time.deltaTime;
-        this.transform.position += newPosition;
+        transform.position += newPosition;
     }
 }

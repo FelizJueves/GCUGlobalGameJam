@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3744112478581935597}
   - component: {fileID: -8517799549808396262}
   m_Layer: 0
-  m_Name: sweets
+  m_Name: sweetsModel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
