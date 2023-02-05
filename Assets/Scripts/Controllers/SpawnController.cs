@@ -52,7 +52,6 @@ public class SpawnController : MonoBehaviour
     void Update()
     {
         waveTimeRemaining -= Time.deltaTime;
-        Debug.Log(waveTimeRemaining);
         if (waveTimeRemaining <= 0 && WavesRemaining > 1)
         {
             Debug.Log("hi :)");

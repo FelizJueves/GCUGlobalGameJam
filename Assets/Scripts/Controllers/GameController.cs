@@ -25,7 +25,6 @@ public class GameController : MonoBehaviour
     }
 
     void Update() {
-        Debug.Log(this.enemiesRemaining);
         if(this.enemiesRemaining == 0) {
             SceneController.sceneController.gameObject.SetActive(true);
         }
