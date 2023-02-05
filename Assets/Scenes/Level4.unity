@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -597,6 +597,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8030804049579838332, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1354952284}
     - target: {fileID: 2870398841751858378, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
       propertyPath: m_Name
       value: CharacterPlaceholder
@@ -968,7 +972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4686544212032762137, guid: 3c44ccf13ca11b94e8beece8dd547eec, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4686544212032762137, guid: 3c44ccf13ca11b94e8beece8dd547eec, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2907,6 +2911,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7939280712066513415, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 3410922434943349105, guid: e7dd350d5892a704280b1f3bf2c2d08c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
 --- !u!4 &784065207 stripped
@@ -4368,7 +4376,7 @@ Transform:
   - {fileID: 690333192}
   - {fileID: 1670871979}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1362877151 stripped
 Transform:
