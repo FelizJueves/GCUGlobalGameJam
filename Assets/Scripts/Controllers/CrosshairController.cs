@@ -24,7 +24,7 @@ public class CrosshairController : MonoBehaviour
     void LateUpdate()
     {
         Vector3 mouse = Vector2.ClampMagnitude(new Vector2(Input.mousePosition.x - WIDTHOVERTWO,Input.mousePosition.y - HEIGHTOVERTWO), circleRadius);
-        mouse.z = mainCamera.transform.position.y - floorOffset;
+        mouse.z = mainCamera.transform.position.y - this.transform.parent.position.y;
         mouse = new Vector3(mouse.x + WIDTHOVERTWO, mouse.y + HEIGHTOVERTWO, mouse.z);
         Vector3 worldPosition = mainCamera.ScreenToWorldPoint(mouse);
         
