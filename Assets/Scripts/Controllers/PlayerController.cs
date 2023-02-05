@@ -58,8 +58,8 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider collision) {
-        switch(collision.tag) {
+    void OnCollisionEnter(Collision collision) {
+        switch(collision.collider.tag) {
             case "Enemy":
                 EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
                 this.health -= enemy.damage;
