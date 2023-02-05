@@ -7,6 +7,7 @@ public class BulletController : MonoBehaviour
     public int damage;
 
     public float movementFactor;
+    public int MultiKill;
 
     public float timeToLive;
     // Start is called before the first frame update
@@ -24,7 +25,9 @@ public class BulletController : MonoBehaviour
 
     void handleLifetime() {
         timeToLive -= Time.deltaTime;
-        if (timeToLive < 0f) {
+        if (timeToLive < 0f)
+        {
+            MultiKill++;
             kill();
         }
     }
