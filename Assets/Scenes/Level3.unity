@@ -3324,8 +3324,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8058327909375820931, guid: c29de340905590f4289877660281d967, type: 3}
     - target: {fileID: 7939280712066513415, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
+      propertyPath: WaveTimer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939280712066513415, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
       propertyPath: EnemyCount
-      value: 20
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939280712066513415, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
+      propertyPath: WavesRemaining
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}

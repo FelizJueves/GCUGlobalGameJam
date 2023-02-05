@@ -32,6 +32,7 @@ public class EnemyController : MonoBehaviour
     }
 
     public void kill() {
+        GameController.gameController.decrementEnemies();
         Destroy(this.gameObject);
     }
 
