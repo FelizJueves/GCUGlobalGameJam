@@ -8,24 +8,17 @@ public class GameController : MonoBehaviour
     public enum LevelEnum {Level1, Level2, Level3, Level4, HubWorld}
     public LevelEnum Level;
 
-    public GameObject level1Mesh;
-    public GameObject level2Mesh;
-    public GameObject level3Mesh;
-    public GameObject level4Mesh;
+    public GameObject[] enemies;
 
-    public Mesh getEnemyMesh() {
-        Mesh[] meshes = new Mesh[]{
-            level1Mesh.GetComponent<MeshFilter>().mesh,
-            level2Mesh.GetComponent<MeshFilter>().mesh,
-            level3Mesh.GetComponent<MeshFilter>().mesh,
-            level4Mesh.GetComponent<MeshFilter>().mesh,
-            null
-        };
-        return meshes[(int) Level];
+    public void setEnemyType(GameObject enemyObject) {
+        int intLevel = (int) Level;
+        enemyObject.GetComponent<MeshFilter>().mesh = enemies[intLevel].GetComponent<MeshFilter>().sharedMesh;
+        enemyObject.GetComponent<MeshRenderer>().materials = enemies[intLevel].GetComponent<MeshRenderer>().sharedMaterials;
+        enemyObject.GetComponent<MeshCollider>().sharedMesh = enemyObject.GetComponent<MeshFilter>().sharedMesh;
+        enemyObject.transform.localScale = enemies[intLevel].transform.localScale;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Scene CurrentScene = SceneManager.GetActiveScene();
         
