@@ -10,6 +10,7 @@ public class SpawnController : MonoBehaviour
     public int EnemyCount;
 
     public float WaveTimer = 60f;
+    public int WavesRemaining = 3;
 
     public float MaxX;
     public float MinX;
@@ -47,5 +48,10 @@ public class SpawnController : MonoBehaviour
     private void Update()
     {
         WaveTimer -= Time.deltaTime;
+        if (WaveTimer <= 0 && WavesRemaining > 1)
+        {
+            SpawnEnemies();
+            WaveTimer = 60f;
+        }
     }
 }
