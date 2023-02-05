@@ -2854,6 +2854,14 @@ PrefabInstance:
       propertyPath: Enemy
       value: 
       objectReference: {fileID: 3410922434943349105, guid: e7dd350d5892a704280b1f3bf2c2d08c, type: 3}
+    - target: {fileID: 7939280712066513415, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
+      propertyPath: WaveTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939280712066513415, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
+      propertyPath: WavesRemaining
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
 --- !u!4 &784065207 stripped
@@ -4837,6 +4845,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 945330592}
+    - target: {fileID: 2870398841751858353, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
+      propertyPath: movementFactor
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2870398841751858378, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
       propertyPath: m_Name
       value: CharacterPlaceholder

@@ -3325,15 +3325,15 @@ PrefabInstance:
       objectReference: {fileID: 8088177850094082616, guid: 830f024dae9dd604a8d96c36d9b2f65a, type: 3}
     - target: {fileID: 7939280712066513415, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
       propertyPath: WaveTimer
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7939280712066513415, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
       propertyPath: EnemyCount
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7939280712066513415, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
       propertyPath: WavesRemaining
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
@@ -3668,6 +3668,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 105004617}
+    - target: {fileID: 2870398841751858353, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
+      propertyPath: movementFactor
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2870398841751858378, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
       propertyPath: m_Name
       value: CharacterPlaceholder
