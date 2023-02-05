@@ -16,11 +16,6 @@ public class EnemyController : MonoBehaviour
 
     void Start() {
         transformToChase = GameObject.FindWithTag("MainCharacter").transform;
-        decideMesh();
-    }
-
-    void decideMesh() {
-        GameController.gameController.setEnemyType(this.gameObject);
     }
 
     // Update is called once per frame
