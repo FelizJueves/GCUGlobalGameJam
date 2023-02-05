@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    //public GameObject collision;
+    public static SceneController sceneController;
+    void Awake() {
+        sceneController = this;
+    }
 
     void OnTriggerEnter(Collider collision)
     {

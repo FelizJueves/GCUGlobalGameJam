@@ -10,6 +10,7 @@ public class SpawnController : MonoBehaviour
     public int EnemyCount;
 
     public float WaveTimer = 60f;
+    float waveTimeRemaining;
     public int WavesRemaining = 3;
 
     public float MaxX;
@@ -32,7 +33,10 @@ public class SpawnController : MonoBehaviour
         MinZ = (Size.z / 2) * -1;
 
         SpawnEnemies();
+        waveTimeRemaining = WaveTimer;
+        GameController.gameController.setEnemiesRemaining(EnemyCount*WavesRemaining);
     }
+
     void SpawnEnemies()
     {
         for (int i = 0; i < EnemyCount; i++)
@@ -45,13 +49,16 @@ public class SpawnController : MonoBehaviour
             Instantiate(Enemy, new Vector3(LocationX, 1, LocationZ), Quaternion.identity);
         }
     }
-    private void Update()
+    void Update()
     {
-        WaveTimer -= Time.deltaTime;
-        if (WaveTimer <= 0 && WavesRemaining > 1)
+        waveTimeRemaining -= Time.deltaTime;
+        Debug.Log(waveTimeRemaining);
+        if (waveTimeRemaining <= 0 && WavesRemaining > 1)
         {
+            Debug.Log("hi :)");
             SpawnEnemies();
-            WaveTimer = 60f;
+            waveTimeRemaining = WaveTimer;
+            WavesRemaining--;
         }
     }
 }

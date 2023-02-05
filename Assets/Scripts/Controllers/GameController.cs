@@ -9,12 +9,30 @@ public class GameController : MonoBehaviour
     public enum LevelEnum {Level1, Level2, Level3, Level4, HubWorld}
     public LevelEnum Level;
 
+    int enemiesRemaining;
     int Score;
 
-    public GameObject[] enemies;
+    public void setEnemiesRemaining(int enemiesRemaining) {
+        this.enemiesRemaining = enemiesRemaining;
+    }
+
+    public void decrementEnemies() {
+        this.enemiesRemaining--;
+    }
 
     public int getScore() {
         return Score;
+    }
+
+    void Update() {
+        Debug.Log(this.enemiesRemaining);
+        if(this.enemiesRemaining == 0) {
+            SceneController.sceneController.gameObject.SetActive(true);
+        }
+    }
+
+    void Start() {
+        SceneController.sceneController.gameObject.SetActive(false);
     }
 
     void Awake()
@@ -27,7 +45,6 @@ public class GameController : MonoBehaviour
         {
             Level = LevelEnum.Level1;
             Debug.Log(Level);
-
         }
         else if (CurrentScene.name == "Level2")
         {
@@ -49,6 +66,7 @@ public class GameController : MonoBehaviour
             Debug.Log(Level);
         }
     }
+
     public void UpdateScore(int KillScore)
     {
         Score = Score + KillScore;
