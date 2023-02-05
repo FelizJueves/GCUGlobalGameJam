@@ -8,6 +8,12 @@ public class PlayerController : MonoBehaviour
     public BulletController bullet;
     public BulletController melee;
     public CrosshairController crosshair;
+
+    public float MeleeCooldown = 0.2f;
+    public float RangedCooldown = 2f;
+
+    public bool CanMelee = true;
+    public bool CanRanged = true;
     
     [Min(1)]
     public int health;
@@ -23,8 +29,28 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        handleHealth();
 
+        if (CanMelee == false)
+        {
+            MeleeCooldown -= Time.deltaTime;
+            if (MeleeCooldown <= 0)
+            {
+                CanMelee = true;
+            }
+        }
+        if (CanRanged == false)
+        {
+            RangedCooldown -= Time.deltaTime;
+            if (RangedCooldown <= 0)
+            {
+                CanRanged = true;
+            }
+        }
+
+        
+        RangedCooldown -= Time.deltaTime;
+
+        handleHealth();
         if(!isDead) {
             handleMovement();
             handleActions();
@@ -45,11 +71,15 @@ public class PlayerController : MonoBehaviour
     }
 
     void handleActions() {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && CanMelee == true) {
             Instantiate(melee, this.transform.position, Quaternion.identity);
+            CanMelee = false;
+            MeleeCooldown = 0.2f;
         }
-        else if (Input.GetMouseButtonDown(1)) {
+        else if (Input.GetMouseButtonDown(1) && CanRanged == true) {
             Instantiate(bullet, this.transform.position, Quaternion.identity);
+            CanRanged = false;
+            RangedCooldown = 2f;
         }
     }
 
