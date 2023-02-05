@@ -94,7 +94,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2870398841751858378}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -114,6 +114,10 @@ MonoBehaviour:
   bullet: {fileID: 1728015286735023681, guid: bfbc26ac864f07043ac56405bc695255, type: 3}
   melee: {fileID: 1728015286735023681, guid: 147fa7572d5c9994bbd2da992b53908e, type: 3}
   crosshair: {fileID: 9199016165516612392, guid: 54720dd7edeffc64a80f3e6420ebf27e, type: 3}
+  MeleeCooldown: 0.2
+  RangedCooldown: 2
+  CanMelee: 1
+  CanRanged: 1
   health: 2
   movementFactor: 5
 --- !u!54 &-4328941865421182203

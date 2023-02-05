@@ -14,36 +14,13 @@ public class EnemyController : MonoBehaviour
 
     Transform transformToChase;
 
-    void OnTriggerEnter(Collider collision) {
-        switch(collision.tag) {
-            case "MainCharacter":
-                MainCharacterCollision(collision.gameObject.GetComponent<PlayerController>());
-                break;
-            case "Bullet":
-                BulletCollision(collision.gameObject.GetComponent<BulletController>());
-                break;
-        }
-    }
-
-    void MainCharacterCollision(PlayerController player) {
-        player.health -= damage;
-        Destroy(this.gameObject);
-    }
-
-    void BulletCollision(BulletController bullet) {
-
-        bullet.GetComponent<BulletController>().KillCounter();
-        this.health -= bullet.damage;
-        kill();
-    }
-
     void Start() {
         transformToChase = GameObject.FindWithTag("MainCharacter").transform;
         decideMesh();
     }
 
     void decideMesh() {
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().setEnemyType(this.gameObject);
+        GameController.gameController.setEnemyType(this.gameObject);
     }
 
     // Update is called once per frame
@@ -59,7 +36,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void kill() {
+    public void kill() {
         Destroy(this.gameObject);
     }
 

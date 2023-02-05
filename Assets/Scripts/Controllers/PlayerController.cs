@@ -50,12 +50,22 @@ public class PlayerController : MonoBehaviour
         
         RangedCooldown -= Time.deltaTime;
 
-        handleHealth();
         if(!isDead) {
+            handleHealth();
             handleMovement();
             handleActions();
         }
         
+    }
+
+    void OnTriggerEnter(Collider collision) {
+        switch(collision.tag) {
+            case "Enemy":
+                EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+                this.health -= enemy.damage;
+                enemy.kill();
+                break;
+        }
     }
 
     void handleHealth() {
@@ -85,6 +95,7 @@ public class PlayerController : MonoBehaviour
 
     void kill() {
         isDead = true;
+        Debug.Log("Final Score: " + GameController.gameController.getScore());
     }
 
     public override string ToString() {
