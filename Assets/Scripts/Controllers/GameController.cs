@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
     public enum LevelEnum {Level1, Level2, Level3, Level4, HubWorld}
     public LevelEnum Level;
 
+    public int Score;
+
     public GameObject[] enemies;
 
     public void setEnemyType(GameObject enemyObject) {
@@ -20,6 +22,7 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
+        Score = 0;
         Scene CurrentScene = SceneManager.GetActiveScene();
         
         if (CurrentScene.name == "Level1")
@@ -47,5 +50,14 @@ public class GameController : MonoBehaviour
             Level = LevelEnum.HubWorld;
             Debug.Log(Level);
         }
+    }
+    public void UpdateScore(int KillScore)
+    {
+        Score = Score + KillScore;
+        Debug.Log(Score);
+    }
+    public void Update()
+    {
+        //Debug.Log(Score);
     }
 }

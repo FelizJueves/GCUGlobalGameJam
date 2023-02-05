@@ -112,4 +112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   movementFactor: 0.5
+  MultiKill: 0
+  GameController: {fileID: 5755875632283547691, guid: 28fc43b65d29c0e43a56eae9469b27c5, type: 3}
   timeToLive: 1

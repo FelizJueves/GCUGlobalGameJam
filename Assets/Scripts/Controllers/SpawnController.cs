@@ -9,6 +9,8 @@ public class SpawnController : MonoBehaviour
     public GameObject Enemy;
     public int EnemyCount;
 
+    public float WaveTimer = 60f;
+
     public float MaxX;
     public float MinX;
 
@@ -41,5 +43,9 @@ public class SpawnController : MonoBehaviour
             LocationZ = Random.Range(MinZ, MaxZ);
             Instantiate(Enemy, new Vector3(LocationX, 1, LocationZ), Quaternion.identity);
         }
+    }
+    private void Update()
+    {
+        WaveTimer -= Time.deltaTime;
     }
 }

@@ -8,6 +8,7 @@ public class BulletController : MonoBehaviour
 
     public float movementFactor;
     public int MultiKill;
+    public GameObject GameController;
 
     public float timeToLive;
     // Start is called before the first frame update
@@ -27,12 +28,40 @@ public class BulletController : MonoBehaviour
         timeToLive -= Time.deltaTime;
         if (timeToLive < 0f)
         {
-            MultiKill++;
             kill();
         }
     }
 
-    void kill() {
+    void kill()
+    {
+        int KillScore = 0;
+
+        if (MultiKill == 1)
+        {
+            KillScore = 100;
+            GameController.GetComponent<GameController>().UpdateScore(KillScore);
+        }
+        else if (MultiKill == 2)
+        {
+            KillScore = 250;
+            GameController.GetComponent<GameController>().UpdateScore(KillScore);
+        }
+        else if (MultiKill == 3)
+        {
+            KillScore = 400;
+            GameController.GetComponent<GameController>().UpdateScore(KillScore);
+        }
+        else if (MultiKill == 4) 
+        {
+            KillScore = 650;
+            GameController.GetComponent<GameController>().UpdateScore(KillScore);
+        }
+        else if (MultiKill >= 5)
+        {
+            KillScore = 1000;
+            GameController.GetComponent<GameController>().UpdateScore(KillScore);
+        }
+
         Destroy(this.gameObject);
     }
 
@@ -40,4 +69,9 @@ public class BulletController : MonoBehaviour
         Vector3 newPosition = new Vector3(this.transform.forward.x * movementFactor, 0f, this.transform.forward.z * movementFactor);
         this.transform.position += newPosition;
     }
+    public void KillCounter()
+    {
+        MultiKill++;
+    }
+    
 }

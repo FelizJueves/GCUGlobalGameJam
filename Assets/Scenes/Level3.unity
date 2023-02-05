@@ -870,6 +870,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5755875632283547690, guid: 28fc43b65d29c0e43a56eae9469b27c5, type: 3}
+      propertyPath: Score
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5755875632283547691, guid: 28fc43b65d29c0e43a56eae9469b27c5, type: 3}
       propertyPath: m_Name
       value: GameController
@@ -1589,7 +1593,7 @@ Transform:
   m_GameObject: {fileID: 393940184}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 64.43, y: 3.5, z: 0}
-  m_LocalScale: {x: -71.29845, y: 7.0264, z: 4.276}
+  m_LocalScale: {x: 65, y: 7.0264, z: 4.276}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1220337420}
@@ -3310,6 +3314,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7939280712066513415, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
+      propertyPath: EnemyCount
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb5c020ea99a5c84898547c6c270fc56, type: 3}
 --- !u!4 &773425649 stripped
@@ -3533,7 +3541,7 @@ Transform:
   m_GameObject: {fileID: 879781323}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -64.08, y: 3.5, z: 0}
-  m_LocalScale: {x: -71.29845, y: 7.0264, z: 4.276}
+  m_LocalScale: {x: 65, y: 7.0264, z: 4.276}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1220337420}
@@ -9210,7 +9218,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 170461114090831652, guid: 702a937e86b1345439f89875d1181cb6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 170461114090831652, guid: 702a937e86b1345439f89875d1181cb6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9265,13 +9273,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2870398841751858353, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870398841751858353, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
+      propertyPath: movementFactor
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2870398841751858378, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
       propertyPath: m_Name
       value: CharacterPlaceholder
       objectReference: {fileID: 0}
     - target: {fileID: 2870398841751858382, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2870398841751858382, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
       propertyPath: m_LocalPosition.x
