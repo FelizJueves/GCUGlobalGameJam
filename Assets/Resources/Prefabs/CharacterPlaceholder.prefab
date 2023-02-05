@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2870398841751858381}
   - component: {fileID: 2870398841751858353}
   - component: {fileID: -4328941865421182203}
+  - component: {fileID: -8030804049579838332}
   m_Layer: 0
   m_Name: CharacterPlaceholder
   m_TagString: MainCharacter
@@ -118,7 +119,7 @@ MonoBehaviour:
   RangedCooldown: 2
   CanMelee: 1
   CanRanged: 1
-  health: 2
+  health: 3
   movementFactor: 5
 --- !u!54 &-4328941865421182203
 Rigidbody:
@@ -136,3 +137,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &-8030804049579838332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2870398841751858378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856d9a0cd2cd243448a69e38578c6163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  numOfHearts: 3
+  hearts: []
+  fullHeart: {fileID: 21300000, guid: 5cce8e42dd1d6cf47bcbf208fb75755b, type: 3}
+  emptyHeart: {fileID: 0}
