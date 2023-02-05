@@ -361,6 +361,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2870398841751858378, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
   m_PrefabInstance: {fileID: 1104787478}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &229812710
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229812701}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ba2825e84306004b94e5c2c7ff75174, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &300514867
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +660,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ebc0bef64358e314789adb61da2333d2, type: 2}
+  - {fileID: 2100000, guid: d1307a99a5937eb4fa4c751f882ba6f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1212,6 +1232,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8030804049579838332, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 229812701}
     - target: {fileID: 2870398841751858378, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
       propertyPath: m_Name
       value: CharacterPlaceholder
@@ -1222,15 +1246,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2870398841751858382, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.995207
+      value: 5.88
       objectReference: {fileID: 0}
     - target: {fileID: 2870398841751858382, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 2.17
       objectReference: {fileID: 0}
     - target: {fileID: 2870398841751858382, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.7379017
+      value: -4.14
       objectReference: {fileID: 0}
     - target: {fileID: 2870398841751858382, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
       propertyPath: m_LocalRotation.w

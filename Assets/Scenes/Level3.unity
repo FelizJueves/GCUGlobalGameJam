@@ -3664,6 +3664,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8030804049579838332, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 105004617}
     - target: {fileID: 2870398841751858378, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
       propertyPath: m_Name
       value: CharacterPlaceholder
@@ -3678,7 +3682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2870398841751858382, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2870398841751858382, guid: 30dceea7aea7ae34ea3572050b20f0bc, type: 3}
       propertyPath: m_LocalPosition.z
